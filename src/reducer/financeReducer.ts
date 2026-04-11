@@ -24,6 +24,12 @@ export function financeReducer(state: FinanceState, action: FinanceAction) : Fin
                 ...state,
                 transactions: state.transactions.filter(t => t.id !== action.payload)
             }
+
+        case "EDIT_TRANSACTION":    
+            return {
+                ...state,
+                transactions: state.transactions.map(t => t.id === action.payload.id ? action.payload : t)
+            }
         case "SET_FILTER":   
             return {
                 ...state,
