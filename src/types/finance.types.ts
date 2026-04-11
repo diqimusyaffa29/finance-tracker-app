@@ -37,6 +37,7 @@ type FinanceState = {
 type FinanceAction =
     | { type: 'ADD_TRANSACTION'; payload: Transaction }
     | { type: 'DELETE_TRANSACTION'; payload: string } //payload id
+    | { type: 'EDIT_TRANSACTION'; payload: Transaction }
     | { type: 'SET_FILTER'; payload: Partial<FilterState> }
 
 
