@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useFinance } from "./useFinance";
-import { Summary } from "../types/finance.types";
+import { Summary, Transaction } from "../types/finance.types";
 
 function useTransaction() {
     const { state, dispatch } = useFinance()
@@ -28,9 +28,26 @@ function useTransaction() {
         }, { income: 0, expense: 0, balance: 0 })
     }, [transactions])
 
-    return (
-        transactions
-    )
+
+    const addTransaction = (data: Transaction) => {
+        dispatch({ type: "ADD_TRANSACTION", payload: data })
+    }
+
+    const editTransaction = (data: Transaction) => {
+        dispatch({ type: "EDIT_TRANSACTION", payload: data })
+    }
+
+    const deleteTransaction = (id: string) => {
+        dispatch({ type: "DELETE_TRANSACTION", payload: id })
+    }
+
+    return {
+        transactions,
+        summary,
+        addTransaction,
+        editTransaction,
+        deleteTransaction
+    }
 }
 
 export { useTransaction }
