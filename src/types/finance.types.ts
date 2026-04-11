@@ -40,6 +40,11 @@ type FinanceAction =
     | { type: 'EDIT_TRANSACTION'; payload: Transaction }
     | { type: 'SET_FILTER'; payload: Partial<FilterState> }
 
+type Summary ={
+    income: number
+    expense: number
+    balance: number
+}
 
 
-export type { Budget, FilterState, FinanceAction, FinanceState, Transaction, Category }
+export type { Budget, FilterState, FinanceAction, FinanceState, Transaction, Category, Summary }
