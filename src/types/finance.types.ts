@@ -39,6 +39,9 @@ type FinanceAction =
     | { type: 'DELETE_TRANSACTION'; payload: string } //payload id
     | { type: 'EDIT_TRANSACTION'; payload: Transaction }
     | { type: 'SET_FILTER'; payload: Partial<FilterState> }
+    | { type: 'ADD_BUDGET'; payload: Budget }
+    | { type: 'EDIT_BUDGET'; payload: Budget }
+    | { type: 'DELETE_BUDGET'; payload: string } //payload id
 
 type Summary ={
     income: number
