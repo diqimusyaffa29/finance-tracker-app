@@ -1,6 +1,6 @@
 import { useMemo } from "react"
 import { useFinance } from "./useFinance"
-import { Category } from "../types/finance.types"
+import { Budget, Category } from "../types/finance.types"
 
 function useBudget() {
     const { state, dispatch } = useFinance()
@@ -39,8 +39,23 @@ function useBudget() {
         })
     }, [state.budgets, spentByCategory])
 
+    const addBudget = (data: Budget) => {
+        dispatch({ type: "ADD_BUDGET", payload: data })
+    }
+
+    const editBudget = (data: Budget) => {
+        dispatch({ type: "EDIT_BUDGET", payload: data })
+    }
+
+    const deleteBudget = (id: string) => {
+        dispatch({ type: "DELETE_BUDGET", payload: id })
+    }
+
     return {
-        spentByCategory
+        budgets,
+        addBudget, 
+        editBudget,
+        deleteBudget
     }
 }
 
