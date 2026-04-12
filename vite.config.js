@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import path from "path"
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
