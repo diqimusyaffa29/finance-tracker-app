@@ -1,5 +1,6 @@
 import { useFilter } from "@/hooks/useFilter"
 import { Button } from "../ui/button"
+import { SelectCategory } from "./SelectCategory"
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
@@ -25,17 +26,22 @@ const FilterBar = () => {
     }
 
     return (
-        <div className="flex items-center gap-3">
-            <Button variant={"outline"} size={"sm"} onClick={handlePreviousMonth}>
-                ←
-            </Button>
-            <span className="font-medium text-sm min-w-32 text-center">
-                {MONTHS[filter.month]} {filter.year}
-            </span>
-            <Button variant={"outline"} size={"sm"} onClick={handleNextMonth}>
-                →
-            </Button>
-        </div>
+        <>
+            <div className="flex justify-end items-center gap-3">
+                <h2 className="mr-auto">Overview</h2>
+                <Button variant={"outline"} size={"sm"} onClick={handlePreviousMonth}>
+                    ←
+                </Button>
+                <span className="font-medium text-sm min-w-32 text-center">
+                    {MONTHS[filter.month]} {filter.year}
+                </span>
+
+                <Button variant={"outline"} size={"sm"} onClick={handleNextMonth}>
+                    →
+                </Button>
+                <SelectCategory />
+            </div>
+        </>
     )
 }
 
