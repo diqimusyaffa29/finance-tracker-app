@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <div className="flex min-h-screen">
           <Sidebar />
-          <main className="flex-1 p-6">
+          <main className="flex-1">
             <Routes>
               <Route element={<Dashboard />} path="/" />
               <Route element={<Transactions />} path="/transaction" />
