@@ -39,7 +39,10 @@ const FilterBar = () => {
                 <Button variant={"outline"} size={"sm"} onClick={handleNextMonth}>
                     →
                 </Button>
-                <SelectCategory />
+                <SelectCategory
+                    value={filter.category}
+                    onValueChange={(value) => setFilter({ category: value })}
+                />
             </div>
         </>
     )
