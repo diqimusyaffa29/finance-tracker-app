@@ -2,7 +2,7 @@ import { useFilter } from "@/hooks/useFilter"
 import { Button } from "../ui/button"
 import { SelectCategory } from "./SelectCategory"
 
-const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+export const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 
 
