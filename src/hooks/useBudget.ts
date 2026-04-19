@@ -55,7 +55,8 @@ function useBudget() {
         budgets,
         addBudget, 
         editBudget,
-        deleteBudget
+        deleteBudget,
+        spentByCategory
     }
 }
 
