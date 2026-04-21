@@ -2,11 +2,6 @@ import type { Category } from "@/types/finance.types"
 import { useFinance } from "./useFinance"
 import { useMemo } from "react"
 
-type ChartData = {
-    category: Category
-    amount: number
-}
-
 
 const useExpensesChart = () => {
     const { state } = useFinance()
