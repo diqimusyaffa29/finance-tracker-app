@@ -1,5 +1,6 @@
 import { ExpenseChart } from "@/components/dashboard/ExpenseChart"
 import { FilterBar } from "@/components/dashboard/FilterBar"
+import { IncomeChart } from "@/components/dashboard/IncomeChart"
 import { SummarySection } from "@/components/dashboard/SummarySection"
 import TopThreeCategories from "@/components/dashboard/TopThreeCategories"
 
@@ -14,7 +15,7 @@ function Dashboard() {
                 <div className="grid grid-cols-3 items-start space-x-3">
                     <div className="grid space-y-2 col-span-2">
                         <ExpenseChart />
-                        <ExpenseChart />
+                        <IncomeChart />
                     </div>
                     <div className="grid">
                         <TopThreeCategories />
