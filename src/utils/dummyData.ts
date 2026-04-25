@@ -56,6 +56,14 @@ export const dummyTransactions: Transaction[] = [
         type: "expense",
         category: "health",
         date: new Date().toISOString()
+    },
+    {
+        id: "8",
+        description: "Gaji Bulanan",
+        amount: 3800000,
+        type: "income",
+        category: "salary",
+        date: new Date().toISOString()
     }
 ]
 
