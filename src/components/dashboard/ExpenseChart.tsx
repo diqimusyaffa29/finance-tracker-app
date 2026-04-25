@@ -4,7 +4,6 @@ import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recha
 
 const ExpenseChart = () => {
     const { chartData } = useExpensesChart()
-
     return (
         <div className="border rounded-2xl shadow-sm p-4 bg-white">
             <h3 className="text-sm font-medium mb-4">Expenses by category</h3>
@@ -31,7 +30,7 @@ const ExpenseChart = () => {
                         />
                         <Tooltip
                             formatter={(value) => [
-                                `Rp ${Number((value ?? 0).toLocaleString("id-ID"))}`,
+                                `Rp ${(value ?? 0).toLocaleString("id-ID")}`,
                                 "Expense"
                             ]}
                             labelFormatter={(label) => toTitleCase(label)}
