@@ -5,6 +5,7 @@ type Category =
     | 'health'
     | 'shopping'
     | 'saving'
+    | 'salary'
     | 'others'
 
 type Transaction = {
